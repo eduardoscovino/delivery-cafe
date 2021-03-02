@@ -1,0 +1,15 @@
+O delivery de café pode ter 3 modelos distintos: cliente, empregado e cafe
+
+O empregado pode ser um operador ou entregador
+
+Operador: 
+pode adicionar ou retirar um café do catálogo
+pode adicionar um cliente na base
+pode abrir uma ordem de entrega
+pode consultar os pedidos nao entregues
+
+Entregador:
+pode visualizar os pedidos
+pode marcar um pedido como entregue
+
+Cada empregado tem login e senha
