@@ -24,7 +24,7 @@ class EmpregadoRepo
     @empregados.select { |empregado| empregado.funcao == "entregador" }
   end
 
-  def find_by_username(usuario)
+  def find_by_usuario(usuario)
     @empregados.find { |empregado| empregado.usuario == usuario}
   end
 
