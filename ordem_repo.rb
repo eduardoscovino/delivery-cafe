@@ -9,7 +9,7 @@ class OrdemRepo
     @cliente_repo = cliente_repo
     @empregado_repo = empregado_repo
     @next_id = 1
-    load_csv if File.exist?
+    load_csv if File.exist?(@csv_file)
   end
 
   def create(ordem)

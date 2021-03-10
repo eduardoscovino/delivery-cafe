@@ -22,21 +22,7 @@ class Router
   end
 
   private
-
-  def route_acao_operador
-    mostrar_menu_operador
-    opcao = gets.chomp.to_i
-    print `clear`
-    acao_operador(opcao)
-  end
-
-  def route_acao_entregador
-    mostrar_menu_entregador
-    opcao = gets.chomp.to_i
-    print `clear`
-    acao_entregador(opcao)
-  end
-
+  
   def mostrar_menu_operador
     puts "--------------------"
     puts "------- MENU -------"
@@ -51,8 +37,8 @@ class Router
     puts "8. Sair"
     print "> "
   end
-
-  def print_rider_menu
+  
+  def mostrar_menu_entregador
     puts "--------------------"
     puts "------- MENU -------"
     puts "--------------------"
@@ -62,9 +48,21 @@ class Router
     puts "4. Sair"
     print "> "
   end
+  
+  def route_acao_operador
+    mostrar_menu_operador
+    opcao = gets.chomp.to_i
+    acao_operador(opcao)
+  end
+
+  def route_acao_entregador
+    mostrar_menu_entregador
+    opcao = gets.chomp.to_i
+    acao_entregador(opcao)
+  end
 
   def acao_operador(opcao)
-    case choice
+    case opcao
     when 1 then @cafes_controller.add
     when 2 then @cafes_controller.list
     when 3 then @clientes_controller.add
@@ -78,7 +76,7 @@ class Router
   end
 
   def acao_entregador(opcao)
-    case choice
+    case opcao
     when 1 then @ordens_controller.listar_minhas_ordens(@usuario_momento)
     when 2 then @ordens_controller.marcar_como_entregue(@usuario_momento)
     when 3 then logout!

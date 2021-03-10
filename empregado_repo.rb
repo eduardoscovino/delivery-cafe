@@ -50,4 +50,5 @@ class EmpregadoRepo
       @empregados << Empregado.new(row)
     end
     @next_id = @empregados.last.id + 1 unless @empregados.empty?
+  end
 end
