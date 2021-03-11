@@ -2,7 +2,6 @@ require_relative "cafes_view"
 require_relative "clientes_view"
 require_relative "sessoes_view"
 require_relative "ordens_view"
-require_relative "ordem"
 
 class OrdensController
   def initialize(cafe_repo, cliente_repo, empregado_repo, ordem_repo)

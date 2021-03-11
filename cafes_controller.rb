@@ -18,7 +18,7 @@ class CafesController
   end
 
   def list
-    display_cafe
+    display_cafes
   end
 
   private

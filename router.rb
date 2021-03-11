@@ -17,7 +17,6 @@ class Router
           route_acao_entregador
         end
       end
-      print `clear`
     end
   end
 
@@ -67,8 +66,8 @@ class Router
     when 2 then @cafes_controller.list
     when 3 then @clientes_controller.add
     when 4 then @clientes_controller.list
-    when 5 then @orders_controller.add
-    when 6 then @orders_controller.listar_pedidos_nao_entregues
+    when 5 then @ordens_controller.add
+    when 6 then @ordens_controller.listar_pedidos_nao_entregues
     when 7 then logout!
     when 8 then stop!
     else puts "Tente novamente..."
