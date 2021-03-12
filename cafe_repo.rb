@@ -43,7 +43,7 @@ class CafeRepo
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.foreach(@csv_file, csv_options) do |row|
       row[:id] = row[:id].to_i
-      row[:preco] = row[:preco].to_f
+      row[:preco] = row[:preco].to_i
       @cafes << Cafe.new(row)
     end
     @next_id = @cafes.last.id + 1 unless @cafes.empty?
