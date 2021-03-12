@@ -12,6 +12,8 @@ No Café Delivery, é possível logar como operador ou entregador, e naturalment
  
  
  
+ 
+ 
 O app começa com um login, que pode ser feito por um operador ou entregador. A partir daí, surgem dois cenários:
 
 •	Login do operador: pode adicionar novos clientes, cafés e ordens, além de conseguir listar todo o repositório disponível dos mesmos.
