@@ -29,7 +29,7 @@ class OrdemRepo
   end
 
   def minhas_ordens_nao_entregues(empregado)
-    @ordens.select { |ordem| ordem.empregado == empregado !ordem.entregue? }
+    @ordens.select { |ordem| ordem.empregado == empregado && !ordem.entregue? }
   end
 
   private
